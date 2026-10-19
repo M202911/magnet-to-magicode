@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.env
+.env.*
+.b2_account_info
+.actor/actor_input.json
+storage/
+.devin/

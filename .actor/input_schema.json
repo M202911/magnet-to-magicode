@@ -1,0 +1,36 @@
+{
+  "title": "Magnet to Backblaze B2",
+  "description": "Download files from a magnet or torrent link and upload them individually to Backblaze B2 without ZIP compression.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "magnetLink": {
+      "title": "Magnet Link",
+      "type": "string",
+      "description": "Magnet or torrent link to download",
+      "editor": "textfield",
+      "prefill": "magnet:?xt=urn:btih:..."
+    },
+    "b2ApplicationKeyId": {
+      "title": "B2 Application Key ID",
+      "type": "string",
+      "description": "Backblaze B2 application key ID",
+      "editor": "textfield",
+      "sectionCaption": "Backblaze B2 credentials"
+    },
+    "b2ApplicationKey": {
+      "title": "B2 Application Key",
+      "type": "string",
+      "description": "Backblaze B2 application key (kept secret)",
+      "editor": "textfield",
+      "isSecret": true
+    },
+    "b2BucketName": {
+      "title": "B2 Bucket Name",
+      "type": "string",
+      "description": "Name of the Backblaze B2 bucket to upload to",
+      "editor": "textfield"
+    }
+  },
+  "required": ["magnetLink", "b2ApplicationKeyId", "b2ApplicationKey", "b2BucketName"]
+}
