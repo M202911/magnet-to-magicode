@@ -1,5 +1,5 @@
 {
-    "name":  "magnet-to-b2",
+    "name":  "magnet-to-magicode",
     "version":  "0.1",
     "buildTag":  "latest",
     "environmentVariables":  {
@@ -8,13 +8,13 @@
     "dockerfile":  "./Dockerfile",
     "input":  "./input_schema.json",
     "readme":  "./README.md",
-    "title":  "Magnet to Backblaze B2",
-    "description":  "Download torrent files and upload them directly to Backblaze B2 without ZIP compression.",
+    "title":  "Magnet to Magicode",
+    "description":  "Download torrent files and upload them individually to send.magicode.me without ZIP compression.",
     "tags":  [
                  "magnet",
                  "torrent",
                  "download",
-                 "backblaze-b2",
+                 "magicode",
                  "libtorrent"
              ],
     "isPublic":  false,

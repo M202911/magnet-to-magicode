@@ -1,16 +1,13 @@
-# Magnet to Backblaze B2
+# Magnet to Magicode
 
-Downloads files from a magnet or torrent link and uploads each file directly to a Backblaze B2 bucket. Files are not compressed.
+Downloads files from a magnet or torrent link and uploads each file individually to [send.magicode.me](https://send.magicode.me). Files are not compressed, and the torrent's directory structure is retained in the output file names.
 
 ## Input
 
 - `magnetLink` (required): magnet or torrent link.
-- `b2ApplicationKeyId` (required): Backblaze B2 application key ID.
-- `b2ApplicationKey` (required): Backblaze B2 application key. The input is marked secret.
-- `b2BucketName` (required): destination bucket name.
 
-Create an application key in Backblaze with access limited to the intended bucket and the minimum required write permissions. Credentials are supplied as run input and are not logged by the Actor.
+The Magicode service currently allows files up to 10 GB and deletes them two days after upload. The Actor uploads files sequentially using a headless Chromium browser and returns the download link for each file.
 
 ## Output
 
-The Actor reports the destination bucket, file count, total size, and uploaded object names and IDs in the Apify dataset. Torrent directory structure is preserved in B2 object names.
+The Actor reports the destination, file count, total size, and each uploaded file's name, size, and download URL in the Apify dataset. Keep the dataset private: the service says its links are not intended for public distribution.
